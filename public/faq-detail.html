@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=1920, initial-scale=1.0">
+<meta name="viewport" content="width=1080">
 <title>魔根金虫草胶囊 - FAQ</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;900&display=swap');
@@ -10,402 +10,341 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
   body {
-    font-family: 'Noto Sans SC', 'Microsoft YaHei', sans-serif;
-    width: 1920px;
-    height: 1080px;
-    overflow: hidden;
-    background: #0d1b0e;
+    font-family: 'Noto Sans SC', system-ui, -apple-system, sans-serif;
+    width: 1080px;
+    min-height: 1920px;
+    background: #fff8f0;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
   }
 
   .container {
-    width: 1880px;
-    height: 1040px;
-    background: linear-gradient(135deg, #1a3a1a 0%, #0d2610 40%, #1a2f1a 70%, #0f1f10 100%);
-    border-radius: 24px;
-    padding: 40px 50px;
+    width: 100%;
+    min-height: 1920px;
+    background: linear-gradient(180deg, #fff8f0 0%, #fef5e8 100%);
     display: flex;
     flex-direction: column;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
   }
 
-  /* 装饰性背景元素 */
-  .container::before {
-    content: '';
-    position: absolute;
-    top: -200px;
-    right: -200px;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(212,175,55,0.06) 0%, transparent 70%);
-    border-radius: 50%;
-  }
-
-  .container::after {
-    content: '';
-    position: absolute;
-    bottom: -150px;
-    left: -150px;
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, rgba(212,175,55,0.04) 0%, transparent 70%);
-    border-radius: 50%;
-  }
-
-  /* 顶部标题区 */
+  /* 顶部标题栏 */
   .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 28px;
-    flex-shrink: 0;
-    position: relative;
-    z-index: 1;
+    background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
+    padding: 45px 50px 40px;
+    border-radius: 0 0 30px 30px;
   }
 
-  .title-group {
+  .header-top {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 18px;
   }
 
-  .icon-box {
+  .q-badge {
     width: 56px;
     height: 56px;
-    background: linear-gradient(135deg, #d4af37, #f5d97a);
-    border-radius: 14px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 28px;
-    box-shadow: 0 4px 15px rgba(212,175,55,0.3);
+    font-size: 30px;
+    color: #fff;
+    font-weight: bold;
   }
 
-  .title-text h1 {
-    color: #f5d97a;
-    font-size: 36px;
+  .header h1 {
+    color: #fff;
+    font-size: 34px;
     font-weight: 900;
     letter-spacing: 2px;
-    text-shadow: 0 2px 10px rgba(212,175,55,0.2);
   }
 
-  .title-text p {
-    color: rgba(245,217,122,0.6);
-    font-size: 14px;
-    letter-spacing: 4px;
-    margin-top: 2px;
+  .header-sub {
+    color: rgba(255,255,255,0.75);
+    font-size: 16px;
+    letter-spacing: 3px;
+    margin-top: 6px;
+    margin-left: 74px;
   }
 
-  .product-badge {
-    background: rgba(212,175,55,0.12);
-    border: 1px solid rgba(212,175,55,0.25);
-    border-radius: 30px;
+  .product-tag {
+    display: inline-block;
+    margin-top: 14px;
+    margin-left: 74px;
     padding: 8px 24px;
-    color: #d4af37;
+    background: rgba(255,255,255,0.12);
+    border-radius: 20px;
+    color: #fff;
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 700;
     letter-spacing: 1px;
   }
 
-  .product-badge span {
-    color: #f5d97a;
-    font-weight: 700;
-  }
-
-  /* 分割线 */
-  .divider {
-    height: 1px;
-    background: linear-gradient(90deg, rgba(212,175,55,0.3), rgba(212,175,55,0.05));
-    margin-bottom: 24px;
-    flex-shrink: 0;
-    position: relative;
-    z-index: 1;
-  }
-
-  /* FAQ 网格区域 */
-  .faq-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-    flex: 1;
-    position: relative;
-    z-index: 1;
-  }
-
-  .faq-item {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(212,175,55,0.12);
-    border-radius: 16px;
-    padding: 18px 22px;
+  /* 卡片 */
+  .faq-list {
+    padding: 20px 40px 40px;
     display: flex;
     flex-direction: column;
-    transition: all 0.2s;
+    gap: 14px;
+  }
+
+  .faq-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 0;
+    border: 1.5px solid rgba(192,57,43,0.1);
     position: relative;
     overflow: hidden;
   }
 
-  .faq-item::before {
+  .faq-card::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    width: 3px;
+    width: 5px;
     height: 100%;
-    background: linear-gradient(180deg, #d4af37, rgba(212,175,55,0.2));
-    border-radius: 3px 0 0 3px;
+    background: #c0392b;
+    border-radius: 2.5px;
   }
 
-  .faq-item:hover {
-    background: rgba(255,255,255,0.07);
-    border-color: rgba(212,175,55,0.25);
+  .faq-body {
+    padding: 22px 26px 22px 30px;
   }
 
-  .q {
+  .q-row {
     display: flex;
     align-items: flex-start;
-    gap: 10px;
-    margin-bottom: 8px;
+    gap: 12px;
+    margin-bottom: 10px;
   }
 
-  .q-icon {
-    flex-shrink: 0;
-    width: 24px;
-    height: 24px;
-    background: linear-gradient(135deg, #d4af37, #f5d97a);
+  .q-dot {
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(135deg, #c0392b, #e74c3c);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #0d1b0e;
-    font-size: 13px;
-    font-weight: 900;
-    margin-top: 1px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    flex-shrink: 0;
+    margin-top: 2px;
   }
 
-  .q-text {
-    color: #f5d97a;
-    font-size: 16px;
-    font-weight: 600;
+  .q-label {
+    color: #c0392b;
+    font-size: 18px;
+    font-weight: 700;
     line-height: 1.4;
   }
 
-  .a {
+  .a-row {
     display: flex;
     align-items: flex-start;
-    gap: 10px;
-    padding-left: 0;
+    gap: 12px;
   }
 
-  .a-icon {
-    flex-shrink: 0;
-    width: 24px;
-    height: 24px;
-    background: rgba(76, 175, 80, 0.2);
-    border: 1px solid rgba(76, 175, 80, 0.3);
+  .a-dot {
+    width: 26px;
+    height: 26px;
+    background: rgba(192,57,43,0.08);
+    border: 1.5px solid rgba(192,57,43,0.2);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #66bb6a;
-    font-size: 13px;
-    font-weight: 900;
-    margin-top: 1px;
+    color: #c0392b;
+    font-size: 12px;
+    font-weight: bold;
+    flex-shrink: 0;
+    margin-top: 2px;
   }
 
   .a-text {
-    color: rgba(255,255,255,0.85);
-    font-size: 14px;
-    line-height: 1.6;
+    color: #222;
+    font-size: 17px;
+    line-height: 1.7;
     font-weight: 400;
   }
 
   .a-text strong {
-    color: #f5d97a;
-    font-weight: 600;
+    color: #c0392b;
+    font-weight: 700;
   }
 
-  .a-text .highlight {
-    color: #66bb6a;
-    font-weight: 600;
+  .a-text .red {
+    color: #c0392b;
+    font-weight: 700;
   }
 
-  .a-text .gold {
-    color: #d4af37;
-    font-weight: 600;
+  .a-text .sep {
+    display: block;
   }
 
   /* 底部 */
   .footer {
+    padding: 30px 45px;
+    border-top: 1px solid rgba(192,57,43,0.08);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 16px;
-    padding-top: 14px;
-    border-top: 1px solid rgba(212,175,55,0.1);
-    flex-shrink: 0;
-    position: relative;
-    z-index: 1;
+    margin-top: auto;
   }
 
-  .footer-text {
-    color: rgba(255,255,255,0.3);
-    font-size: 13px;
-    letter-spacing: 1px;
+  .footer-left {
+    color: #999;
+    font-size: 15px;
   }
 
-  .footer-text span {
-    color: rgba(212,175,55,0.4);
+  .footer-left span {
+    color: #c0392b;
   }
 
-  .shop-name {
-    color: rgba(245,217,122,0.5);
-    font-size: 14px;
-    letter-spacing: 2px;
-  }
-
-  /* 第七个FAQ占一整行 */
-  .faq-full {
-    grid-column: 1 / -1;
-  }
-
-  .faq-full .q-text {
-    font-size: 16px;
-  }
-
-  .faq-full .a-text {
-    font-size: 14px;
+  .footer-right {
+    color: #c0392b;
+    font-size: 15px;
+    font-weight: 500;
   }
 </style>
 </head>
 <body>
 <div class="container">
   <div class="header">
-    <div class="title-group">
-      <div class="icon-box">❓</div>
-      <div class="title-text">
-        <h1>常见问题解答</h1>
-        <p>FAQ · 让您买得放心用得安心</p>
-      </div>
+    <div class="header-top">
+      <div class="q-badge">?</div>
+      <h1>常见问题解答</h1>
     </div>
-    <div class="product-badge">
-      <span>魔根金虫草胶囊</span> · 药食同源 道地产品
-    </div>
+    <div class="header-sub">让您买得放心 · 用得安心</div>
+    <div class="product-tag">魔根金虫草胶囊</div>
   </div>
 
-  <div class="divider"></div>
-
-  <div class="faq-grid">
+  <div class="faq-list">
     <!-- 1 -->
-    <div class="faq-item">
-      <div class="q">
-        <div class="q-icon">?</div>
-        <div class="q-text">你们家产品是正品吗？</div>
-      </div>
-      <div class="a">
-        <div class="a-icon">✓</div>
-        <div class="a-text">咱们产品保证<strong>百分百是正品</strong>，<span class="highlight">假一罚十</span>。每一盒都有据可查，放心购买！</div>
+    <div class="faq-card">
+      <div class="faq-body">
+        <div class="q-row">
+          <div class="q-dot">?</div>
+          <div class="q-label">你们家产品是正品吗？</div>
+        </div>
+        <div class="a-row">
+          <div class="a-dot">✓</div>
+          <div class="a-text">
+            咱们产品保证是<strong>正品</strong>，<strong class="red">假一罚十</strong>。每一盒都有据可查，放心购买！
+          </div>
+        </div>
       </div>
     </div>
 
     <!-- 2 -->
-    <div class="faq-item">
-      <div class="q">
-        <div class="q-icon">?</div>
-        <div class="q-text">每天吃几粒？什么时候吃效果最好？</div>
-      </div>
-      <div class="a">
-        <div class="a-icon">✓</div>
-        <div class="a-text">
-          服用时间没有限制，推荐<strong>下午5点到7点</strong>（肾经当令）吃。<br>
-          👨 <span class="gold">男士</span>：第一周每天5粒，之后每天3粒，<span class="highlight">间隔一天吃</span><br>
-          👩 <span class="gold">女士</span>：每天2粒，<span class="highlight">间隔一天吃</span>
+    <div class="faq-card">
+      <div class="faq-body">
+        <div class="q-row">
+          <div class="q-dot">?</div>
+          <div class="q-label">每天吃几粒？什么时候吃效果最好？</div>
+        </div>
+        <div class="a-row">
+          <div class="a-dot">✓</div>
+          <div class="a-text">
+            服用时间没有限制，推荐<strong>下午5点到7点</strong>这个时间段吃。
+            <span class="sep">👨 <strong>男士</strong>：第一周每天吃5粒，连续吃一周。以后每天吃3粒，间隔一天吃。</span>
+            <span class="sep">👩 <strong>女士</strong>：每天吃2粒，间隔一天吃。</span>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- 3 -->
-    <div class="faq-item">
-      <div class="q">
-        <div class="q-icon">?</div>
-        <div class="q-text">吃魔根金虫草胶囊有什么好处？</div>
-      </div>
-      <div class="a">
-        <div class="a-icon">✓</div>
-        <div class="a-text">
-          冬虫夏草入<strong>肾肺二经</strong>，特别是对<strong>40岁以上的男士</strong>，是不可多得的好产品。<br>
-          <span class="highlight">吃过一周的都会来感谢我。</span>🌟
+    <div class="faq-card">
+      <div class="faq-body">
+        <div class="q-row">
+          <div class="q-dot">?</div>
+          <div class="q-label">吃魔根金虫草胶囊有什么好处？</div>
+        </div>
+        <div class="a-row">
+          <div class="a-dot">✓</div>
+          <div class="a-text">
+            冬虫夏草入<strong>肾肺二经</strong>，特别是对<strong>40岁以上的男士</strong>，是很不错的选择。🌟
+          </div>
         </div>
       </div>
     </div>
 
     <!-- 4 -->
-    <div class="faq-item">
-      <div class="q">
-        <div class="q-icon">?</div>
-        <div class="q-text">长期服用会有副作用吗？</div>
-      </div>
-      <div class="a">
-        <div class="a-icon">✓</div>
-        <div class="a-text">
-          咱们是<strong>药食同源</strong>，道地产品，<span class="gold">1997-188号终身的批号</span>，<br>
-          在国内是<strong>独一份</strong>。可以<strong>长期服用</strong>，<span class="highlight">不会有任何副作用</span>。✅
+    <div class="faq-card">
+      <div class="faq-body">
+        <div class="q-row">
+          <div class="q-dot">?</div>
+          <div class="q-label">长期服用，会有副作用吗？</div>
+        </div>
+        <div class="a-row">
+          <div class="a-dot">✓</div>
+          <div class="a-text">
+            咱们是<strong>药食同源</strong>，道地产品，<strong>1997-188号批号</strong>。可以长期服用，不会有任何副作用。✅
+          </div>
         </div>
       </div>
     </div>
 
     <!-- 5 -->
-    <div class="faq-item">
-      <div class="q">
-        <div class="q-icon">?</div>
-        <div class="q-text">价格可以再便宜一些吗？</div>
-      </div>
-      <div class="a">
-        <div class="a-icon">✓</div>
-        <div class="a-text">
-          非常理解您。价格是由<strong>价值</strong>决定的。原材料是<strong>冬虫夏草菌丝体</strong>和<strong>五年以上红参</strong>。<br>
-          每100g核心营养成分<strong>腺苷含量≥220mg</strong>，<span class="highlight">是其他家的几倍甚至十几倍</span>。<br>
-          值不值，相信您心里有了答案。💪
+    <div class="faq-card">
+      <div class="faq-body">
+        <div class="q-row">
+          <div class="q-dot">?</div>
+          <div class="q-label">价格可以再便宜一些吗？</div>
+        </div>
+        <div class="a-row">
+          <div class="a-dot">✓</div>
+          <div class="a-text">
+            非常理解您。价格是由价值决定的。
+            <span class="sep">原材料是<strong>冬虫夏草菌丝体</strong>和<strong>五年以上的红参</strong>。</span>
+            <span class="sep">冬虫夏草只有一点点菌丝体，不像其他家用的是全虫草。</span>
+            <span class="sep">每100克含有的<strong>腺苷含量≥220mg</strong>。</span>
+            <span class="sep">是其他家的几倍甚至十几倍。值不值，相信您心里有了答案。💪</span>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- 6 -->
-    <div class="faq-item">
-      <div class="q">
-        <div class="q-icon">?</div>
-        <div class="q-text">保质期是多久？生产日期新鲜吗？</div>
-      </div>
-      <div class="a">
-        <div class="a-icon">✓</div>
-        <div class="a-text">
-          <strong>保质期2年</strong>。我们保证送到您手上的每盒产品，<br>
-          都是<strong><span class="highlight">新鲜的生产日期</span></strong>。📅
+    <div class="faq-card">
+      <div class="faq-body">
+        <div class="q-row">
+          <div class="q-dot">?</div>
+          <div class="q-label">保质期是多久？生产日期是新鲜的吗？</div>
+        </div>
+        <div class="a-row">
+          <div class="a-dot">✓</div>
+          <div class="a-text">
+            <strong>保质期2年</strong>。送到您手上的每盒产品，都是新鲜的生产日期。📅
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- 7 - 占一整行 -->
-    <div class="faq-item faq-full">
-      <div class="q">
-        <div class="q-icon">?</div>
-        <div class="q-text">可以开发票吗？</div>
-      </div>
-      <div class="a">
-        <div class="a-icon">✓</div>
-        <div class="a-text">
-          咱们是<strong>正规商家</strong>，支持开具发票。🖨️ 您下单后前往<strong>发票中心申请</strong>，正常<span class="highlight">3个工作日内</span>开具完毕。
+    <!-- 7 -->
+    <div class="faq-card">
+      <div class="faq-body">
+        <div class="q-row">
+          <div class="q-dot">?</div>
+          <div class="q-label">可以开发票吗？</div>
+        </div>
+        <div class="a-row">
+          <div class="a-dot">✓</div>
+          <div class="a-text">
+            咱们是正规商家，支持开具发票。您下单后前往发票中心申请，正常<strong>3个工作日内</strong>开具完毕。
+          </div>
         </div>
       </div>
     </div>
   </div>
 
   <div class="footer">
-    <div class="footer-text">魔根金虫草胶囊 · <span>药食同源 道地产品</span></div>
-    <div class="shop-name">更多问题请咨询客服 💬</div>
+    <div class="footer-left">魔根金虫草胶囊 · <span>药食同源 道地产品</span></div>
+    <div class="footer-right">更多问题请咨询客服 💬</div>
   </div>
 </div>
 </body>
