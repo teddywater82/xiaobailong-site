@@ -1,217 +1,187 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#e8f4f8"/>
-      <stop offset="50%" style="stop-color:#f0f8ff"/>
-      <stop offset="100%" style="stop-color:#e3f0f5"/>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fff8f0"/>
+      <stop offset="100%" style="stop-color:#fef5e8"/>
     </linearGradient>
     <linearGradient id="headerBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1a73e8"/>
-      <stop offset="100%" style="stop-color:#1557b0"/>
+      <stop offset="0%" style="stop-color:#c0392b"/>
+      <stop offset="100%" style="stop-color:#e74c3c"/>
     </linearGradient>
     <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" style="stop-color:#ffffff"/>
-      <stop offset="100%" style="stop-color:#f7fbff"/>
+      <stop offset="100%" style="stop-color:#fffcf5"/>
     </linearGradient>
     <linearGradient id="qIcon" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1a73e8"/>
-      <stop offset="100%" style="stop-color:#4a90d9"/>
-    </linearGradient>
-    <linearGradient id="divider" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:rgba(26,115,232,0.15)"/>
-      <stop offset="50%" style="stop-color:rgba(26,115,232,0.06)"/>
-      <stop offset="100%" style="stop-color:rgba(26,115,232,0)"/>
+      <stop offset="0%" style="stop-color:#c0392b"/>
+      <stop offset="100%" style="stop-color:#e74c3c"/>
     </linearGradient>
   </defs>
 
-  <!-- 背景 -->
+  <!-- 纯色背景（高对比度友好） -->
   <rect width="1080" height="1920" fill="url(#bg)"/>
 
-  <!-- ===== 顶部蓝色标题区 ===== -->
-  <rect x="0" y="0" width="1080" height="200" fill="url(#headerBg)"/>
-  <path d="M0,200 Q270,170 540,200 T1080,200 L1080,0 L0,0 Z" fill="url(#headerBg)"/>
+  <!-- ===== 顶部红色标题区 ===== -->
+  <rect x="0" y="0" width="1080" height="180" fill="url(#headerBg)"/>
 
   <!-- 问号图标 -->
-  <circle cx="80" cy="80" r="26" fill="rgba(255,255,255,0.2)"/>
-  <text x="80" y="90" font-family="Arial" font-size="28" text-anchor="middle" fill="#ffffff" font-weight="bold">?</text>
+  <circle cx="76" cy="70" r="28" fill="rgba(255,255,255,0.2)"/>
+  <text x="76" y="81" font-family="Arial" font-size="30" text-anchor="middle" fill="#ffffff" font-weight="bold">?</text>
 
-  <text x="124" y="78" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="30" font-weight="900" fill="#ffffff" letter-spacing="2">常见问题解答</text>
-  <text x="126" y="105" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="13" fill="rgba(255,255,255,0.7)" letter-spacing="3">FAQ · 让您买得放心用得安心</text>
+  <text x="122" y="68" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="34" font-weight="900" fill="#ffffff" letter-spacing="2">常见问题解答</text>
+  <text x="124" y="98" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="15" fill="rgba(255,255,255,0.8)" letter-spacing="3">让您买得放心 · 用得安心</text>
 
   <!-- 产品名称标签 -->
-  <rect x="80" y="130" width="300" height="30" rx="15" fill="rgba(255,255,255,0.15)"/>
-  <text x="100" y="150" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="13" fill="#ffffff" font-weight="700">魔根金虫草胶囊</text>
+  <rect x="76" y="120" width="320" height="34" rx="17" fill="rgba(255,255,255,0.18)"/>
+  <text x="98" y="143" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="15" fill="#ffffff" font-weight="700" letter-spacing="1">魔根金虫草胶囊</text>
 
-  <!-- ===== 波浪分割 ===== -->
-  <path d="M0,190 Q90,180 180,190 T360,190 T540,190 T720,190 T900,190 T1080,190" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
-  <path d="M0,198 Q120,188 240,198 T480,198 T720,198 T960,198 T1080,198" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
-
-  <!-- ===== 内容区域（带边距，内容全部完整显示） ===== -->
+  <!-- ===== 正文区 ===== -->
   
   <!-- FAQ 1：正品 -->
-  <g transform="translate(50, 220)">
-    <rect width="980" height="105" rx="14" fill="url(#cardBg)" filter="url(#shadow)"/>
-    <rect x="0" y="0" width="980" height="105" rx="14" fill="none" stroke="rgba(26,115,232,0.08)" stroke-width="1"/>
-    <!-- 左侧蓝色色块 -->
-    <rect x="0" y="0" width="4" height="105" rx="2" fill="#1a73e8"/>
+  <g transform="translate(45, 210)">
+    <rect width="990" height="115" rx="16" fill="url(#cardBg)" stroke="rgba(192,57,43,0.12)" stroke-width="1.5"/>
+    <rect x="0" y="0" width="5" height="115" rx="2.5" fill="#c0392b"/>
 
-    <circle cx="28" cy="28" r="12" fill="url(#qIcon)"/>
-    <text x="28" y="33" font-family="Arial" font-size="12" text-anchor="middle" fill="#ffffff" font-weight="bold">?</text>
-    <text x="50" y="33" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="15" font-weight="600" fill="#1a73e8">你们家产品是正品吗？</text>
+    <circle cx="32" cy="32" r="14" fill="url(#qIcon)"/>
+    <text x="32" y="38" font-family="Arial" font-size="14" text-anchor="middle" fill="#ffffff" font-weight="bold">?</text>
+    <text x="56" y="37" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="18" font-weight="700" fill="#c0392b">你们家产品是正品吗？</text>
 
-    <circle cx="28" cy="72" r="11" fill="rgba(26,115,232,0.1)" stroke="rgba(26,115,232,0.2)" stroke-width="1"/>
-    <text x="28" y="76" font-family="Arial" font-size="10" text-anchor="middle" fill="#1a73e8" font-weight="bold">✓</text>
-    <text x="50" y="69" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="14" fill="#444444">
-      咱们产品保证<tspan fill="#1a73e8" font-weight="600">百分百是正品</tspan>，<tspan fill="#e53935" font-weight="600">假一罚十</tspan>。每一盒都有据可查，放心购买！
+    <circle cx="32" cy="82" r="13" fill="rgba(192,57,43,0.08)" stroke="rgba(192,57,43,0.2)" stroke-width="1.5"/>
+    <text x="32" y="88" font-family="Arial" font-size="12" text-anchor="middle" fill="#c0392b" font-weight="bold">✓</text>
+    <text x="56" y="80" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="17" fill="#222222">
+      咱们产品保证是<tspan fill="#c0392b" font-weight="700">正品</tspan>，<tspan fill="#c0392b" font-weight="700">假一罚十</tspan>。每一盒都有据可查，放心购买！
     </text>
   </g>
 
   <!-- FAQ 2：用量 -->
-  <g transform="translate(50, 345)">
-    <rect width="980" height="145" rx="14" fill="url(#cardBg)"/>
-    <rect x="0" y="0" width="980" height="145" rx="14" fill="none" stroke="rgba(26,115,232,0.08)" stroke-width="1"/>
-    <rect x="0" y="0" width="4" height="145" rx="2" fill="#1a73e8"/>
+  <g transform="translate(45, 350)">
+    <rect width="990" height="175" rx="16" fill="url(#cardBg)" stroke="rgba(192,57,43,0.12)" stroke-width="1.5"/>
+    <rect x="0" y="0" width="5" height="175" rx="2.5" fill="#c0392b"/>
 
-    <circle cx="28" cy="28" r="12" fill="url(#qIcon)"/>
-    <text x="28" y="33" font-family="Arial" font-size="12" text-anchor="middle" fill="#ffffff" font-weight="bold">?</text>
-    <text x="50" y="33" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="15" font-weight="600" fill="#1a73e8">每天吃几粒？什么时候吃效果最好？</text>
+    <circle cx="32" cy="32" r="14" fill="url(#qIcon)"/>
+    <text x="32" y="38" font-family="Arial" font-size="14" text-anchor="middle" fill="#ffffff" font-weight="bold">?</text>
+    <text x="56" y="37" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="18" font-weight="700" fill="#c0392b">每天吃几粒？什么时候吃效果最好？</text>
 
-    <circle cx="28" cy="72" r="11" fill="rgba(26,115,232,0.1)" stroke="rgba(26,115,232,0.2)" stroke-width="1"/>
-    <text x="28" y="76" font-family="Arial" font-size="10" text-anchor="middle" fill="#1a73e8" font-weight="bold">✓</text>
-    <text x="50" y="69" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="14" fill="#444444">
-      服用时间没有限制，推荐<tspan fill="#1a73e8" font-weight="600">下午5点到7点</tspan>（肾经当令）这个时间段吃。
+    <circle cx="32" cy="82" r="13" fill="rgba(192,57,43,0.08)" stroke="rgba(192,57,43,0.2)" stroke-width="1.5"/>
+    <text x="32" y="88" font-family="Arial" font-size="12" text-anchor="middle" fill="#c0392b" font-weight="bold">✓</text>
+    <text x="56" y="80" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="17" fill="#222222">
+      服用时间没有限制，推荐<tspan fill="#c0392b" font-weight="700">下午5点到7点</tspan>这个时间段吃。
     </text>
-    <text x="50" y="95" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="14" fill="#444444">
-      👨 <tspan fill="#1a73e8" font-weight="600">男士</tspan>：第一周，每天吃5粒，连续吃一周。以后每天吃3粒，<tspan fill="#e53935" font-weight="600">间隔一天吃</tspan>。
+    <text x="56" y="110" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="17" fill="#222222">
+      👨 <tspan fill="#c0392b" font-weight="700">男士</tspan>：第一周每天吃5粒，连续吃一周。以后每天吃3粒，间隔一天吃。
     </text>
-    <text x="50" y="121" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="14" fill="#444444">
-      👩 <tspan fill="#1a73e8" font-weight="600">女士</tspan>：每天吃2粒，<tspan fill="#e53935" font-weight="600">间隔一天吃</tspan>。
+    <text x="56" y="140" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="17" fill="#222222">
+      👩 <tspan fill="#c0392b" font-weight="700">女士</tspan>：每天吃2粒，间隔一天吃。
     </text>
   </g>
 
   <!-- FAQ 3：好处 -->
-  <g transform="translate(50, 510)">
-    <rect width="980" height="125" rx="14" fill="url(#cardBg)"/>
-    <rect x="0" y="0" width="980" height="125" rx="14" fill="none" stroke="rgba(26,115,232,0.08)" stroke-width="1"/>
-    <rect x="0" y="0" width="4" height="125" rx="2" fill="#1a73e8"/>
+  <g transform="translate(45, 550)">
+    <rect width="990" height="150" rx="16" fill="url(#cardBg)" stroke="rgba(192,57,43,0.12)" stroke-width="1.5"/>
+    <rect x="0" y="0" width="5" height="150" rx="2.5" fill="#c0392b"/>
 
-    <circle cx="28" cy="28" r="12" fill="url(#qIcon)"/>
-    <text x="28" y="33" font-family="Arial" font-size="12" text-anchor="middle" fill="#ffffff" font-weight="bold">?</text>
-    <text x="50" y="33" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="15" font-weight="600" fill="#1a73e8">吃魔根金虫草胶囊有什么好处？</text>
+    <circle cx="32" cy="32" r="14" fill="url(#qIcon)"/>
+    <text x="32" y="38" font-family="Arial" font-size="14" text-anchor="middle" fill="#ffffff" font-weight="bold">?</text>
+    <text x="56" y="37" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="18" font-weight="700" fill="#c0392b">吃魔根金虫草胶囊有什么好处？</text>
 
-    <circle cx="28" cy="72" r="11" fill="rgba(26,115,232,0.1)" stroke="rgba(26,115,232,0.2)" stroke-width="1"/>
-    <text x="28" y="76" font-family="Arial" font-size="10" text-anchor="middle" fill="#1a73e8" font-weight="bold">✓</text>
-    <text x="50" y="69" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="14" fill="#444444">
-      冬虫夏草入<tspan fill="#1a73e8" font-weight="600">肾肺二经</tspan>，特别是对<tspan fill="#1a73e8" font-weight="600">40岁以上的男士</tspan>，是不可多得的好产品。
+    <circle cx="32" cy="82" r="13" fill="rgba(192,57,43,0.08)" stroke="rgba(192,57,43,0.2)" stroke-width="1.5"/>
+    <text x="32" y="88" font-family="Arial" font-size="12" text-anchor="middle" fill="#c0392b" font-weight="bold">✓</text>
+    <text x="56" y="80" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="17" fill="#222222">
+      冬虫夏草入<tspan fill="#c0392b" font-weight="700">肾肺二经</tspan>，特别是对<tspan fill="#c0392b" font-weight="700">40岁以上的男士</tspan>，
     </text>
-    <text x="50" y="95" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="14" fill="#444444">
-      <tspan fill="#e53935" font-weight="600">吃过一周的都会来感谢我。</tspan> 🌟
+    <text x="56" y="110" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="17" fill="#222222">
+      是很不错的选择。🌟
     </text>
   </g>
 
   <!-- FAQ 4：副作用 -->
-  <g transform="translate(50, 655)">
-    <rect width="980" height="145" rx="14" fill="url(#cardBg)"/>
-    <rect x="0" y="0" width="980" height="145" rx="14" fill="none" stroke="rgba(26,115,232,0.08)" stroke-width="1"/>
-    <rect x="0" y="0" width="4" height="145" rx="2" fill="#1a73e8"/>
+  <g transform="translate(45, 725)">
+    <rect width="990" height="150" rx="16" fill="url(#cardBg)" stroke="rgba(192,57,43,0.12)" stroke-width="1.5"/>
+    <rect x="0" y="0" width="5" height="150" rx="2.5" fill="#c0392b"/>
 
-    <circle cx="28" cy="28" r="12" fill="url(#qIcon)"/>
-    <text x="28" y="33" font-family="Arial" font-size="12" text-anchor="middle" fill="#ffffff" font-weight="bold">?</text>
-    <text x="50" y="33" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="15" font-weight="600" fill="#1a73e8">长期服用，会有副作用吗？</text>
+    <circle cx="32" cy="32" r="14" fill="url(#qIcon)"/>
+    <text x="32" y="38" font-family="Arial" font-size="14" text-anchor="middle" fill="#ffffff" font-weight="bold">?</text>
+    <text x="56" y="37" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="18" font-weight="700" fill="#c0392b">长期服用，会有副作用吗？</text>
 
-    <circle cx="28" cy="72" r="11" fill="rgba(26,115,232,0.1)" stroke="rgba(26,115,232,0.2)" stroke-width="1"/>
-    <text x="28" y="76" font-family="Arial" font-size="10" text-anchor="middle" fill="#1a73e8" font-weight="bold">✓</text>
-    <text x="50" y="69" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="14" fill="#444444">
-      咱们是<tspan fill="#1a73e8" font-weight="600">药食同源</tspan>，道地产品，<tspan fill="#1a73e8" font-weight="600">1997-188号终身的批号</tspan>。
+    <circle cx="32" cy="82" r="13" fill="rgba(192,57,43,0.08)" stroke="rgba(192,57,43,0.2)" stroke-width="1.5"/>
+    <text x="32" y="88" font-family="Arial" font-size="12" text-anchor="middle" fill="#c0392b" font-weight="bold">✓</text>
+    <text x="56" y="80" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="17" fill="#222222">
+      咱们是<tspan fill="#c0392b" font-weight="700">药食同源</tspan>，道地产品，<tspan fill="#c0392b" font-weight="700">1997-188号批号</tspan>。
     </text>
-    <text x="50" y="95" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="14" fill="#444444">
-      在国内是<tspan fill="#1a73e8" font-weight="600">独一份</tspan>。可以<tspan fill="#1a73e8" font-weight="600">长期服用</tspan>，<tspan fill="#e53935" font-weight="600">不会有任何副作用</tspan>。✅
+    <text x="56" y="110" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="17" fill="#222222">
+      可以长期服用，不会有任何副作用。✅
     </text>
   </g>
 
   <!-- FAQ 5：价格 -->
-  <g transform="translate(50, 820)">
-    <rect width="980" height="185" rx="14" fill="url(#cardBg)"/>
-    <rect x="0" y="0" width="980" height="185" rx="14" fill="none" stroke="rgba(26,115,232,0.08)" stroke-width="1"/>
-    <rect x="0" y="0" width="4" height="185" rx="2" fill="#1a73e8"/>
+  <g transform="translate(45, 900)">
+    <rect width="990" height="235" rx="16" fill="url(#cardBg)" stroke="rgba(192,57,43,0.12)" stroke-width="1.5"/>
+    <rect x="0" y="0" width="5" height="235" rx="2.5" fill="#c0392b"/>
 
-    <circle cx="28" cy="28" r="12" fill="url(#qIcon)"/>
-    <text x="28" y="33" font-family="Arial" font-size="12" text-anchor="middle" fill="#ffffff" font-weight="bold">?</text>
-    <text x="50" y="33" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="15" font-weight="600" fill="#1a73e8">价格可以再便宜一些吗？</text>
+    <circle cx="32" cy="32" r="14" fill="url(#qIcon)"/>
+    <text x="32" y="38" font-family="Arial" font-size="14" text-anchor="middle" fill="#ffffff" font-weight="bold">?</text>
+    <text x="56" y="37" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="18" font-weight="700" fill="#c0392b">价格可以再便宜一些吗？</text>
 
-    <circle cx="28" cy="72" r="11" fill="rgba(26,115,232,0.1)" stroke="rgba(26,115,232,0.2)" stroke-width="1"/>
-    <text x="28" y="76" font-family="Arial" font-size="10" text-anchor="middle" fill="#1a73e8" font-weight="bold">✓</text>
-    <text x="50" y="69" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="14" fill="#444444">
-      非常理解您。价格是由<tspan fill="#1a73e8" font-weight="600">价值</tspan>决定的。
+    <circle cx="32" cy="82" r="13" fill="rgba(192,57,43,0.08)" stroke="rgba(192,57,43,0.2)" stroke-width="1.5"/>
+    <text x="32" y="88" font-family="Arial" font-size="12" text-anchor="middle" fill="#c0392b" font-weight="bold">✓</text>
+    <text x="56" y="80" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="17" fill="#222222">
+      非常理解您。价格是由价值决定的。
     </text>
-    <text x="50" y="95" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="14" fill="#444444">
-      咱们家的原材料是<tspan fill="#1a73e8" font-weight="600">冬虫夏草菌丝体</tspan>和<tspan fill="#1a73e8" font-weight="600">五年以上的红参</tspan>。
+    <text x="56" y="110" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="17" fill="#222222">
+      原材料是<tspan fill="#c0392b" font-weight="700">冬虫夏草菌丝体</tspan>和<tspan fill="#c0392b" font-weight="700">五年以上的红参</tspan>。
     </text>
-    <text x="50" y="121" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="14" fill="#444444">
-      注意一根冬虫夏草只有一点点菌丝体，不像其他家用的是全虫草。
+    <text x="56" y="140" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="17" fill="#222222">
+      冬虫夏草只有一点点菌丝体，不像其他家用的是全虫草。
     </text>
-    <text x="50" y="147" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="14" fill="#444444">
-      咱们家产品每100克含有的核心营养成分<tspan fill="#1a73e8" font-weight="600">腺苷含量大于等于220mg</tspan>。
+    <text x="56" y="170" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="17" fill="#222222">
+      每100克含有的<tspan fill="#c0392b" font-weight="700">腺苷含量≥220mg</tspan>。
     </text>
-  </g>
-
-  <!-- FAQ 5续：价格继续 -->
-  <g transform="translate(50, 1025)">
-    <rect width="980" height="85" rx="14" fill="url(#cardBg)"/>
-    <rect x="0" y="0" width="980" height="85" rx="14" fill="none" stroke="rgba(26,115,232,0.08)" stroke-width="1"/>
-    <rect x="0" y="0" width="4" height="85" rx="2" fill="#1a73e8"/>
-
-    <text x="50" y="38" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="14" fill="#444444">
-      是其他家的<tspan fill="#e53935" font-weight="600">几倍甚至十几倍</tspan>。咱们家产品值不值，相信您心里有了答案。💪
+    <text x="56" y="200" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="17" fill="#222222">
+      是其他家的几倍甚至十几倍。值不值，相信您心里有了答案。💪
     </text>
   </g>
 
   <!-- FAQ 6：保质期 -->
-  <g transform="translate(50, 1130)">
-    <rect width="980" height="105" rx="14" fill="url(#cardBg)"/>
-    <rect x="0" y="0" width="980" height="105" rx="14" fill="none" stroke="rgba(26,115,232,0.08)" stroke-width="1"/>
-    <rect x="0" y="0" width="4" height="105" rx="2" fill="#1a73e8"/>
+  <g transform="translate(45, 1160)">
+    <rect width="990" height="115" rx="16" fill="url(#cardBg)" stroke="rgba(192,57,43,0.12)" stroke-width="1.5"/>
+    <rect x="0" y="0" width="5" height="115" rx="2.5" fill="#c0392b"/>
 
-    <circle cx="28" cy="28" r="12" fill="url(#qIcon)"/>
-    <text x="28" y="33" font-family="Arial" font-size="12" text-anchor="middle" fill="#ffffff" font-weight="bold">?</text>
-    <text x="50" y="33" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="15" font-weight="600" fill="#1a73e8">保质期是多久？生产日期是新鲜的吗？</text>
+    <circle cx="32" cy="32" r="14" fill="url(#qIcon)"/>
+    <text x="32" y="38" font-family="Arial" font-size="14" text-anchor="middle" fill="#ffffff" font-weight="bold">?</text>
+    <text x="56" y="37" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="18" font-weight="700" fill="#c0392b">保质期是多久？生产日期是新鲜的吗？</text>
 
-    <circle cx="28" cy="72" r="11" fill="rgba(26,115,232,0.1)" stroke="rgba(26,115,232,0.2)" stroke-width="1"/>
-    <text x="28" y="76" font-family="Arial" font-size="10" text-anchor="middle" fill="#1a73e8" font-weight="bold">✓</text>
-    <text x="50" y="69" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="14" fill="#444444">
-      <tspan fill="#1a73e8" font-weight="600">保质期2年</tspan>。并且我们保证送到您手上的每盒产品，
-    </text>
-    <text x="50" y="95" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="14" fill="#444444">
-      都是<tspan fill="#e53935" font-weight="600">新鲜的生产日期</tspan>。📅
+    <circle cx="32" cy="82" r="13" fill="rgba(192,57,43,0.08)" stroke="rgba(192,57,43,0.2)" stroke-width="1.5"/>
+    <text x="32" y="88" font-family="Arial" font-size="12" text-anchor="middle" fill="#c0392b" font-weight="bold">✓</text>
+    <text x="56" y="80" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="17" fill="#222222">
+      <tspan fill="#c0392b" font-weight="700">保质期2年</tspan>。送到您手上的每盒产品，都是新鲜的生产日期。📅
     </text>
   </g>
 
   <!-- FAQ 7：发票 -->
-  <g transform="translate(50, 1255)">
-    <rect width="980" height="105" rx="14" fill="url(#cardBg)"/>
-    <rect x="0" y="0" width="980" height="105" rx="14" fill="none" stroke="rgba(26,115,232,0.08)" stroke-width="1"/>
-    <rect x="0" y="0" width="4" height="105" rx="2" fill="#1a73e8"/>
+  <g transform="translate(45, 1300)">
+    <rect width="990" height="115" rx="16" fill="url(#cardBg)" stroke="rgba(192,57,43,0.12)" stroke-width="1.5"/>
+    <rect x="0" y="0" width="5" height="115" rx="2.5" fill="#c0392b"/>
 
-    <circle cx="28" cy="28" r="12" fill="url(#qIcon)"/>
-    <text x="28" y="33" font-family="Arial" font-size="12" text-anchor="middle" fill="#ffffff" font-weight="bold">?</text>
-    <text x="50" y="33" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="15" font-weight="600" fill="#1a73e8">可以开发票吗？</text>
+    <circle cx="32" cy="32" r="14" fill="url(#qIcon)"/>
+    <text x="32" y="38" font-family="Arial" font-size="14" text-anchor="middle" fill="#ffffff" font-weight="bold">?</text>
+    <text x="56" y="37" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="18" font-weight="700" fill="#c0392b">可以开发票吗？</text>
 
-    <circle cx="28" cy="72" r="11" fill="rgba(26,115,232,0.1)" stroke="rgba(26,115,232,0.2)" stroke-width="1"/>
-    <text x="28" y="76" font-family="Arial" font-size="10" text-anchor="middle" fill="#1a73e8" font-weight="bold">✓</text>
-    <text x="50" y="69" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="14" fill="#444444">
-      咱们是<tspan fill="#1a73e8" font-weight="600">正规商家</tspan>，支持开具发票。您下单后，前往<tspan fill="#1a73e8" font-weight="600">发票中心</tspan>申请，
+    <circle cx="32" cy="82" r="13" fill="rgba(192,57,43,0.08)" stroke="rgba(192,57,43,0.2)" stroke-width="1.5"/>
+    <text x="32" y="88" font-family="Arial" font-size="12" text-anchor="middle" fill="#c0392b" font-weight="bold">✓</text>
+    <text x="56" y="80" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="17" fill="#222222">
+      咱们是正规商家，支持开具发票。您下单后前往发票中心申请，
     </text>
-    <text x="50" y="95" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="14" fill="#444444">
-      正常<tspan fill="#e53935" font-weight="600">3个工作日内</tspan>开具完毕。
+    <text x="56" y="107" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="17" fill="#222222">
+      正常<tspan fill="#c0392b" font-weight="700">3个工作日内</tspan>开具完毕。
     </text>
   </g>
 
   <!-- ===== 底部 ===== -->
-  <line x1="50" y1="1395" x2="1030" y2="1395" stroke="rgba(26,115,232,0.1)" stroke-width="1"/>
+  <line x1="45" y1="1450" x2="1035" y2="1450" stroke="rgba(192,57,43,0.12)" stroke-width="1"/>
 
-  <text x="50" y="1428" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="13" fill="#999999">魔根金虫草胶囊 · <tspan fill="#1a73e8">药食同源 道地产品</tspan></text>
-  <text x="1030" y="1428" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="13" fill="#1a73e8" text-anchor="end" font-weight="500">更多问题请咨询客服 💬</text>
+  <text x="45" y="1485" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="15" fill="#999999">魔根金虫草胶囊 · <tspan fill="#c0392b">药食同源 道地产品</tspan></text>
+  <text x="1035" y="1485" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="15" fill="#c0392b" text-anchor="end" font-weight="500">更多问题请咨询客服 💬</text>
 
-  <!-- 底部蓝色小装饰 -->
-  <rect x="0" y="1860" width="1080" height="60" fill="#1a73e8" opacity="0.05"/>
+  <!-- 底部装饰 -->
+  <rect x="0" y="1860" width="1080" height="60" fill="#c0392b" opacity="0.04"/>
 </svg>
